@@ -13,13 +13,20 @@
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Surprise</a>
         &nbsp;
         <a href="https://www.facebook.com/profile.php?id=100078222337716">Facebook</a>
+        &nbsp;
+        <div class="container">
+
+     
+            <input class="container_toggle" type="checkbox" id="switch" name="mode">
+            <label for="switch">Toggle</label>
+        </div>
         <hr>
         <h1><center>RAZOBLAST'S WEBSITE</center></h1>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=JetBrains+Mono:wght@300&display=swap');
              body {
-                 background-color: white;
-                 color: black;
+                 background-color: black;
+                 color: white;
                  font-family: 'Comfortaa', cursive;
 
              }
@@ -29,15 +36,15 @@
         <style>
             /*.fun is the box*/
             .fun {
-              background-color: white;
+              background-color: black;
               width: 500px;
-              border: 2px solid black;
+              border: 2px solid white;
               padding: 50px;
               margin: 0 auto;
             }
             /*href color*/
             a {
-                color: black;
+                color: white;
                 text-decoration: none;
             }
             /*rainbow lr and rainbow td are rainbow text css*/
@@ -51,12 +58,94 @@
   color:transparent;
   background-clip: text;
 }
+html {
+  background-color: var(--backg);
+  --btn: #2ab1ce;
+  --backg: black;
+  --colorx: #232323;
+}
+ 
+html[data-theme='dartheme'] {
+  background: var(--backg);
+  --btn: #ea4b3c;
+  --backg: white;
+  --colorx: #fff;
+}
+ 
+ 
+input[type=checkbox] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  
+}
+ 
+label {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 30px;
+  background: var(--btn);
+}
+ 
+label:after {
+  border-radius: 50%;
+  position: absolute;
+  content: '';
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 4px;
+  transition: ease-in-out 200ms;
+}
+ 
+input:checked + label {
+  background: #ea4b3c;
+}
+ 
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+ 
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: ease-in-out 200ms !important;
+  transition-delay: 0 !important;
+}
             </style>
             
             
             
             <div class="fun">Welcome to RazoBlast's website! This website is all about that gamer who sucks at CS:GO, but is fine at Minecraft, my Steam is Bill "RazoBlast" Gates, I am a Linux enthusiast (even though I use a basic Linux distro and suck at Linux.) This website which I spent 45 minutes into coding has no serious meaning, and as you can see I am trying to fill the stupid box up so my website looks better instead of using Lorem Ipsum. Anyways, my Steam, Discord server and Facebook is linked at the top! See you nerds over there! DM on Discord at: Counter-Terrorist#9866. </div>
         <script>
+             var checkbox = document.querySelector('input[name=mode]');
+ 
+ checkbox.addEventListener('change', function() {
+     if(this.checked) {
+         trans()
+         document.documentElement.setAttribute('data-theme', 'dartheme')
+     } else {
+         trans()
+         document.documentElement.setAttribute('data-theme', 'lighttheme')
+     }
+ })
+
+ let trans = () => {
+     document.documentElement.classList.add('transition');
+     window.setTimeout(() => {
+         document.documentElement.classList.remove('transition');
+     }, 1000)
+ }
             </script>
     </body>
 </html>
