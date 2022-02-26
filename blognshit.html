@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>RazoBlast | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="RazoBlast | Home" content="The home of RazoBlast's website!">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <a href="https://steamcommunity.com/profiles/76561199215716696/">Steam</a>
+        &nbsp;
+        <a href="https://discord.gg/4FwGrYj2SQ">Discord</a>
+        &nbsp;
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Surprise</a>
+        &nbsp;
+        <a href="https://www.facebook.com/profile.php?id=100078222337716">Facebook</a>
+        &nbsp;
+        <div class="container">
+
+     
+            <input class="container_toggle" type="checkbox" id="switch" name="mode">
+            <label for="switch">Toggle</label>
+        </div>
+        <hr>
+        <h1><center>RAZOBLAST'S CHEAP BLOG</center></h1>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=JetBrains+Mono:wght@300&display=swap');
+             body {
+                 background-color: black;
+                 color: white;
+                 font-family: 'Comfortaa', cursive;
+
+             }
+             
+        </style>
+
+        <style>
+            /*.fun is the box*/
+            .fun {
+              background-color: black;
+              width: 500px;
+              border: 2px solid white;
+              padding: 50px;
+              margin: 10 auto;
+            }
+            /*href color*/
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            /*rainbow lr and rainbow td are rainbow text css*/
+            .rainbow-lr {
+                  background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+                  color:transparent;
+                  background-clip: text;
+            }
+.rainbow-td {
+  background: linear-gradient(to bottom, red, orange , yellow, green, cyan, blue, violet);
+  color:transparent;
+  background-clip: text;
+}
+body     {
+  background-color: var(--backg);
+  --btn: #2ab1ce;
+  --backg: black;
+  --colorx: #232323;
+}
+ 
+html[data-theme='dartheme'] {
+  background: var(--backg);
+  --btn: #ea4b3c;
+  --backg: white;
+  --colorx: #fff;
+}
+.fun [data-theme='dartheme'] {
+  background: var(--backg);
+  --btn: #ea4b3c;
+  --backg: white;
+  --colorx: #fff;
+}
+ 
+ 
+input[type=checkbox] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  
+}
+ 
+label {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 30px;
+  background: var(--btn);
+}
+ 
+label:after {
+  border-radius: 50%;
+  position: absolute;
+  content: '';
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 4px;
+  transition: ease-in-out 200ms;
+}
+ 
+input:checked + label {
+  background: #ea4b3c;
+}
+ 
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+ 
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: ease-in-out 200ms !important;
+  transition-delay: 0 !important;
+}
+            </style>
+            
+            
+            
+            <div class="fun" class="container"><h1>WELCOME</h1>Welcome to RazoBlast's website! I play fard like stuff like CS:GO, <b>Roadblox,</b> and Minecraft. My Steam is Bill "RazoBlast" Gates, I use Linux LOL mad Windows users. This website which I spent 45 minutes into coding has no serious meaning, and as you can see I am trying to fill the stupid box up so my website looks better instead of using Lorem Ipsum. Anyways, my Steam, Discord server and Facebook is linked at the top! See you nerds over there! DM on Discord at: Counter-Terrorist#9866. </div>
+            &nbsp;
+            <div class="fun" class="container"><h1>I DON'T KNOW WHAT TO WRITE</h1>Hello guys, today was an awesome day, I met "Hammam Singh" from Russia, he said that he was invading Ukraine with the one and only AmogusObanium then he turned into an anime and farded and went away.</div>
+        <script>
+             var checkbox = document.querySelector('input[name=mode]');
+ 
+ checkbox.addEventListener('change', function() {
+     if(this.checked) {
+         trans()
+         document.documentElement.setAttribute('data-theme', 'dartheme')
+     } else {
+         trans()
+         document.documentElement.setAttribute('data-theme', 'lighttheme')
+     }
+ })
+
+ let trans = () => {
+     document.documentElement.classList.add('transition');
+     window.setTimeout(() => {
+         document.documentElement.classList.remove('transition');
+     }, 1000)
+ }
+            </script>
+    </body>
+</html>
