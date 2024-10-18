@@ -1,61 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>RazoBlast | 404! </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="RazoBlast | 404!" content="404 Not Found!">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RazoBlast's Website - 404</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+    height: 100%;
+    font-family: Poppins, sans-serif;
+    color: white; /* Default text color set to white */
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    background-image: url('Image.jpg'); /* Set Image.jpg as background */
+    background-size: cover; /* Cover full screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* For the pseudo-element */
+}
+
+/* Set a foggy blur effect on the body */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(225, 0, 255, 0.2); /* Light fog effect */
+    backdrop-filter: blur(15px); /* Apply blur for foggy effect */
+    z-index: 1; /* Ensure it is behind other content */
+}
+
+/* Adjust the content area */
+.container, .topbar {
+    position: relative; /* Ensure these are above the blur */
+    z-index: 2; /* Set higher than blur */
+}
+
+/* Rest of your existing styles */
+
+        .topbar {
+            background-color: rgba(0, 0, 0, 0.5); /* More transparent black */
+            backdrop-filter: blur(5px); /* Foggy effect */
+            padding: 10px 0; /* Reduced padding for thinner bar */
+            text-align: left; /* Align to the left */
+            position: fixed; /* Keep the topbar fixed at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Set to top of the viewport */
+            z-index: 1000; /* Ensure it stays on top */
+            padding-left: 20px; /* Padding on the left for alignment */
+        }
+
+        .topbar a {
+            color: white; /* Set text color to white */
+            margin: 0 15px; /* Adjust margin */
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, color 0.2s; /* Animation on hover */
+            font-size: 16px; /* Adjusted font size */
+        }
+
+        .topbar a:hover {
+            transform: scale(1.1); /* Scale effect on hover */
+            color: purple; /* Change color to purple on hover */
+        }
+
+        .topbar a i {
+            margin-right: 8px; /* Add space between icon and text */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* Stack the boxes vertically */
+            height: calc(100% - 50px); /* Full height minus the topbar */
+            margin-top: 50px; /* Adjusted margin for new topbar height */
+            justify-content: space-between; /* Space between sections */
+            padding: 20px;
+        }
+
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative; /* Relative positioning for child elements */
+            color: white; /* Text color is white for both sides */
+            overflow: hidden; /* Prevent overflow */
+            border: 1px solid purple; /* Neon purple border */
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black background */
+            box-shadow: 0 0 30px rgb(77, 0, 77); /* Neon glow effect */
+            margin-bottom: 20px; /* Spacing between sections */
+            margin-right: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+}
+
+.section:hover {
+    transform: scale(1.05); /* Scale the box on hover */
+    box-shadow: 0 0 50px rgb(255, 0, 255); /* More intense neon glow when hovered */
+}
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            max-width: 700px; /* Wider text container */
+        }
+
+        
+    </style>
 </head>
 <body>
-    <h1> (≥o≤) </h1>
-    <h2>404 Not Found</h2>
-    <div class="btn">
-        <center><a href="index.html" class="button">Go Back</a></center>
-
-
+    <div class="topbar">
+        <a href="https://www.youtube.com/@realrazoblast" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+        <a href="https://reddit.com/u/amogusdri-" target="_blank"><i class="fab fa-reddit"></i>Reddit</a>
+        <a href="https://github.com/RazoBlast/" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+        <a href="https://open.spotify.com/artist/1jTL93WgDB99pkb7djrjMY" target="_blank"><i class="fab fa-spotify"></i>Spotify</a>
+        <a href="https://discord.gg/2tjXwxkH9e" target="_blank"><i class="fab fa-discord"></i>Discord</a>
     </div>
-</body><style>
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=JetBrains+Mono:wght@300&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=JetBrains+Mono:wght@300&family=Raleway:wght@200&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=JetBrains+Mono:wght@300&family=Raleway:wght@200&family=Ubuntu+Mono&display=swap');
-    body {
-        background-color: #000000;
-        color: #FFFFFF;
-    }
-    h2 {
-        font-family: 'Ubuntu Mono', monospace;
-        text-align: center;
-    }
-    h1 {
-        font-family: 'Raleway', sans-serif;
-        font-size: 175px;
-        text-align: center;
-    }
-    .button {
-        align-self: center;
-        -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
-   color: #000000;
-   font-family: 'Ubuntu Mono', monospace;
-   font-size: 20px;
-   font-weight: 100;
-   padding: 20px;
-   background-color: #f0e9e9;
-   text-decoration: none;
-   display: inline-block;
-   cursor: pointer;
-   text-align: center;
-}
 
-.button:hover {
-   background: #cdd1d6;
-   border: solid #ffffff 1px;
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
-   text-decoration: none;
-}
-
-     
-</style>
+    <div class="container">
+        <div class="section left">
+            <h1 style="font-size:5em;">404</h1>
+            <p>Looks like this is a page that does not exist! Oops!</p>
+        
+    </div>
+   
+    
+    
+</body>
 </html>
