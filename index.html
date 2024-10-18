@@ -1,127 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>RazoBlast | Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="RazoBlast | Home" content="The home of RazoBlast's website!">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RazoBlast's Website - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
-    </head>
-    <body>
-        <a href="https://steamcommunity.com/profiles/76561199215716696/">Steam</a>
-        &nbsp;
-        <a href="https://discord.gg/sjX8DBpdrw">Discord</a>
-        &nbsp;
-        <a href="https://www.youtube.com/channel/UCvj30sfjuCMQmevzT2-WOnw">YouTube</a>
-        &nbsp;
-        <a href="https://grabify.link/KY48Y5">Surprise</a>
-        &nbsp;
-        <a href="https://www.reddit.com/u/amogusdri-">Reddit</a>
-        &nbsp;
-        <a href="blognshit.html">Blog</a>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+    height: 100%;
+    font-family: Poppins, sans-serif;
+    color: white; /* Default text color set to white */
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    background-image: url('Image.jpg'); /* Set Image.jpg as background */
+    background-size: cover; /* Cover full screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* For the pseudo-element */
+}
+
+/* Set a foggy blur effect on the body */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(225, 0, 255, 0.2); /* Light fog effect */
+    backdrop-filter: blur(15px); /* Apply blur for foggy effect */
+    z-index: 1; /* Ensure it is behind other content */
+}
+
+/* Adjust the content area */
+.container, .topbar {
+    position: relative; /* Ensure these are above the blur */
+    z-index: 2; /* Set higher than blur */
+}
+
+/* Rest of your existing styles */
+
+        .topbar {
+            background-color: rgba(0, 0, 0, 0.5); /* More transparent black */
+            backdrop-filter: blur(5px); /* Foggy effect */
+            padding: 10px 0; /* Reduced padding for thinner bar */
+            text-align: left; /* Align to the left */
+            position: fixed; /* Keep the topbar fixed at the top */
+            width: 100%; /* Full width */
+            top: 0; /* Set to top of the viewport */
+            z-index: 1000; /* Ensure it stays on top */
+            padding-left: 20px; /* Padding on the left for alignment */
+        }
+
+        .topbar a {
+            color: white; /* Set text color to white */
+            margin: 0 15px; /* Adjust margin */
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, color 0.2s; /* Animation on hover */
+            font-size: 16px; /* Adjusted font size */
+        }
+
+        .topbar a:hover {
+            transform: scale(1.1); /* Scale effect on hover */
+            color: purple; /* Change color to purple on hover */
+        }
+
+        .topbar a i {
+            margin-right: 8px; /* Add space between icon and text */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* Stack the boxes vertically */
+            height: calc(100% - 50px); /* Full height minus the topbar */
+            margin-top: 50px; /* Adjusted margin for new topbar height */
+            justify-content: space-between; /* Space between sections */
+            padding: 20px;
+        }
+
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative; /* Relative positioning for child elements */
+            color: white; /* Text color is white for both sides */
+            overflow: hidden; /* Prevent overflow */
+            border: 1px solid purple; /* Neon purple border */
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black background */
+            box-shadow: 0 0 30px rgb(77, 0, 77); /* Neon glow effect */
+            margin-bottom: 20px; /* Spacing between sections */
+            margin-right: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+}
+
+.section:hover {
+    transform: scale(1.05); /* Scale the box on hover */
+    box-shadow: 0 0 50px rgb(255, 0, 255); /* More intense neon glow when hovered */
+}
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            max-width: 700px; /* Wider text container */
+        }
+
         
-        <hr>
-        <h1><center>RAZOBLAST'S WEBSITE</center></h1>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=JetBrains+Mono:wght@300&display=swap');
-             body {
-                 background-color: black;
-                 color: white;
-                 font-family: 'Comfortaa', cursive;
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <a href="https://www.youtube.com/@realrazoblast" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+        <a href="https://reddit.com/u/amogusdri-" target="_blank"><i class="fab fa-reddit"></i>Reddit</a>
+        <a href="https://github.com/RazoBlast/" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+        <a href="https://open.spotify.com/artist/1jTL93WgDB99pkb7djrjMY" target="_blank"><i class="fab fa-spotify"></i>Spotify</a>
+        <a href="https://discord.gg/2tjXwxkH9e" target="_blank"><i class="fab fa-discord"></i>Discord</a>
+    </div>
 
-             }
-             
-        </style>
-
-        <style>
-            /*.fun is the box*/
-            
-            .fun {
-              background-color: black;
-              width: 500px;
-              border: 2px solid white;
-              padding: 50px;
-              margin: 0 auto;
-            }
-            /*href color*/
-            a {
-                color: white;
-                text-decoration: none;
-            }
-            /*rainbow lr and rainbow td are rainbow text css*/
-            .rainbow-lr {
-                  background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
-                  color:transparent;
-                  background-clip: text;
-            }
-.rainbow-td {
-  background: linear-gradient(to bottom, red, orange , yellow, green, cyan, blue, violet);
-  color:transparent;
-  background-clip: text;
-}
-body     {
-   background-image: "https://gitlab.com/dwt1/wallpapers/-/raw/master/0070.jpg";
-}
- 
-html[data-theme='dartheme'] {
-  background: var(--backg);
-  --btn: #ea4b3c;
-  --backg: white;
-  --colorx: #fff;
-}
-
- 
- 
-
- 
-label {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  position: relative;
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 55px;
-  height: 30px;
-  background: var(--btn);
-}
- 
-label:after {
-  border-radius: 50%;
-  position: absolute;
-  content: '';
-  background: #fff;
-  width: 20px;
-  height: 20px;
-  top: 5px;
-  left: 4px;
-  transition: ease-in-out 200ms;
-}
- 
-input:checked + label {
-  background: #ea4b3c;
-}
- 
-input:checked + label:after {
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
-}
- 
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: ease-in-out 200ms !important;
-  transition-delay: 0 !important;
-}
-            </style>
-         
+    <div class="container">
+        <div class="section left">
+            <h1 style="font-size:5em;">MUSIC</h1>
+            <p>As a passionate phonk producer and Brazilian funk artist, I pour my creativity into every beat I create. My sound is deeply rooted in the energetic vibes of phonk, infused with the unique rhythms of Brazilian funk. I strive to push the boundaries of these genres, blending elements to craft tracks that resonate with listeners and keep them moving on the dance floor. You can find my music on various platforms, including Spotify and SoundCloud, where I regularly share my latest tracks and collaborations. Each piece I release is a reflection of my journey as an artist, showcasing my growth and dedication to my craft. I enjoy collaborating with fellow musicians and producers, as I believe that the best music often comes from the fusion of different ideas and styles. If you're interested in working together or simply want to connect, feel free to reach out at realrazoblast@gmail.com. Join me on this exciting musical adventure, and stay tuned for more of my upcoming releases!</p>
+        </div>
         
-            
-            
-            <div class="fun" class="container">Hello, I am RazoBlast, I use Arch Linux and that is like my entire personality. Chemistry is also a strong factor about me, as I find the subject cool, alongside with computer science. I also produce some mediocre-ish music (socials at the top). Anyways here is my laptop:<br><br> <b>GPU: RTX 3070 Ti</b><br><b>CPU: i7 12650H</b><br><b>RAM: 16 GB DDR4 3200 MHZ</b><br><b>SSD: 1 TB NVMe</b></div>
-        
-    </body>
+        <div class="section right">
+            <h1 style="font-size:5em;">TECH</h1>
+            <p>As an avid technology enthusiast, I proudly use Arch Linux as my primary operating system, appreciating its flexibility and the control it gives me over my environment. I'm proficient in C# and Python, and I have some experience with PHP and web development, allowing me to create dynamic applications and websites. I've run a forum for a while, which has helped me hone my skills in community management and online communication. Additionally, I possess a solid understanding of cybersecurity principles, which I continuously explore to enhance my knowledge. My interests also extend to hardware, where I enjoy learning about components and building custom setups to optimize performance. With a passion for both software and hardware, I strive to stay updated on the latest technology trends and innovations. Also, I tend to fuck around with others to make some cool stuff too, but I have kind of ended that. I also have very little knowledge on Discord bots and how to use webhooks, but I'm telling you. Very little.</p>
+        </div>
+    
+        <div class="section">
+            <h1 style="font-size:5em;">GAMING</h1>
+            <p>Honestly, not much to speak here. I am fucking ass at everything I play, other than like Counter-Strike and a very cringe game which I shall not mention (it's Blox Fruits) though maybe I can possibly get better? No I fucking cannot. I used to be half decent at Minecraft Crystal PvP, both Hack Client 1.12.2 and legit but I lost interest in that game. So currently I sit in a phase at being mediocre at every single game I play other than the cringe one, and also don't have much interest in gaming at you know an exceeding amount. I even used to play this mobile game called "Idle Heroes" and even Asphalt 8 which I used to be good at, and oh cannot forget CODM, every 9 year old's national game. Just glad that it isn't as horrible as Free Fire to be honest. And it's not like my PC is fucking ass, it is actually really good with an i7 12700H and an RTX 3070 Ti with 32 gigabytes of RAM clocked at DDR4 alongside with a 1 terabyte SSD, though I just lost interest at this point, which I wouldn't call a bad thing as one more less distraction.</p>
+        </div>
+    </div>
+   
+    
+    
+</body>
 </html>
