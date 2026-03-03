@@ -18,20 +18,20 @@
         body, html {
     height: 100%;
     font-family: "JetBrains Mono", sans-serif;
-    color: white; /* Default text color set to white */
+    color: white; 
     margin: 0;
-    overflow: hidden; /* Prevent scrolling */
+    overflow: hidden;
 }
 
 body {
-    background-image: url('Image.jpg'); /* Set Image.jpg as background */
-    background-size: cover; /* Cover full screen */
+    background-image: url('Image.jpg');
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; /* For the pseudo-element */
+    position: relative; 
 }
 
-/* Set a foggy blur effect on the body */
+
 body::before {
     content: "";
     position: absolute;
@@ -39,55 +39,55 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(225, 0, 255, 0.2); /* Light fog effect */
-    backdrop-filter: blur(15px); /* Apply blur for foggy effect */
-    z-index: 1; /* Ensure it is behind other content */
+    background: rgba(225, 0, 255, 0.2); 
+    backdrop-filter: blur(15px); 
+    z-index: 1; 
 }
 
-/* Adjust the content area */
+
 .container, .topbar {
-    position: relative; /* Ensure these are above the blur */
-    z-index: 2; /* Set higher than blur */
+    position: relative; 
+    z-index: 2; 
 }
 
-/* Rest of your existing styles */
+/* stfu bro */
 
         .topbar {
-            background-color: rgba(0, 0, 0, 0.5); /* More transparent black */
-            backdrop-filter: blur(5px); /* Foggy effect */
-            padding: 10px 0; /* Reduced padding for thinner bar */
-            text-align: left; /* Align to the left */
-            position: fixed; /* Keep the topbar fixed at the top */
-            width: 100%; /* Full width */
-            top: 0; /* Set to top of the viewport */
-            z-index: 1000; /* Ensure it stays on top */
-            padding-left: 20px; /* Padding on the left for alignment */
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px); 
+            padding: 10px 0; 
+            text-align: left; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; /* ts required */
+            padding-left: 20px; 
         }
 
         .topbar a {
-            color: white; /* Set text color to white */
-            margin: 0 15px; /* Adjust margin */
+            color: white;
+            margin: 0 15px; 
             text-decoration: none;
             font-weight: bold;
-            transition: transform 0.2s, color 0.2s; /* Animation on hover */
-            font-size: 16px; /* Adjusted font size */
+            transition: transform 0.2s, color 0.2s; 
+            font-size: 16px; 
         }
 
         .topbar a:hover {
-            transform: scale(1.1); /* Scale effect on hover */
-            color: purple; /* Change color to purple on hover */
+            transform: scale(1.1); 
+            color: purple; 
         }
 
         .topbar a i {
-            margin-right: 8px; /* Add space between icon and text */
+            margin-right: 8px; 
         }
 
         .container {
             display: flex;
-            flex-direction: row; /* Stack the boxes vertically */
-            height: calc(100% - 50px); /* Full height minus the topbar */
-            margin-top: 50px; /* Adjusted margin for new topbar height */
-            justify-content: space-between; /* Space between sections */
+            flex-direction: row; 
+            height: calc(100% - 50px);
+            margin-top: 50px; 
+            justify-content: space-between; 
             padding: 20px;
         }
 
@@ -98,20 +98,20 @@ body::before {
             justify-content: center;
             align-items: center;
             padding: 20px;
-            position: relative; /* Relative positioning for child elements */
-            color: white; /* Text color is white for both sides */
-            overflow: hidden; /* Prevent overflow */
-            border: 1px solid purple; /* Neon purple border */
-            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black background */
-            box-shadow: 0 0 30px rgb(77, 0, 77); /* Neon glow effect */
-            margin-bottom: 20px; /* Spacing between sections */
+            position: relative; 
+            color: white; 
+            overflow: hidden; 
+            border: 1px solid purple; 
+            background-color: rgba(0, 0, 0, 0.7); 
+            box-shadow: 0 0 30px rgb(77, 0, 77); 
+            margin-bottom: 20px; 
             margin-right: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .section:hover {
-    transform: scale(1.05); /* Scale the box on hover */
-    box-shadow: 0 0 50px rgb(255, 0, 255); /* More intense neon glow when hovered */
+    transform: scale(1.05); 
+    box-shadow: 0 0 50px rgb(255, 0, 255); 
 }
 
         h1 {
@@ -120,7 +120,7 @@ body::before {
 
         p {
             text-align: center;
-            max-width: 700px; /* Wider text container */
+            max-width: 700px; 
         }
 
         
